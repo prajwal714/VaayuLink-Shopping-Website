@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>VayuL->K</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+          <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+          
+          <style type="text/css">
+          	table, th,td{
+          		border: 2px solid grey;
+
+          	}
+          	th,td{
+          		padding: 15px;
+          		text-align: left;
+          	}
+          </style>
+     </head>
+     <body>
+          <nav class="navbar navbar-inverse" style="padding-top: 10px;">
+     <div class="container-fluid">
+          <div class="header">
+                 <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-cloud" style="font-size: 30px; padding-bottom: 10px;"></span></a>
+      
+          </div>
+          <div class="collapse navbar-collapse">
+
+               <ul class="nav navbar-left navbar-nav">
+                    <li> <a href="/About"><span style="font-size: 20px;" class="glyphicon glyphicon-info-sign">About</span></a></li>
+               </ul>
+
+               <ul class="nav navbar-right navbar-nav">
+                    
+                    <li><a href="/Order">Order Online <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li><a href="/">Convert to Ink <span class="glyphicon glyphicon-leaf"></span></a></li>
+                    <li><a href="/stats">Annual Report <span class="glyphicon glyphicon-stats"></span></a></li>
+                    <li><a href="/admin">Admin <span class="glyphicon glyphicon-user"></span></a></li>
+                    
+                   
+                  </ul>  
+               </div>
+               
+          </div>
+     </div>
+</nav>
+<div class="conatiner" style="text-align: center;">
+	<div class="jumbotron">
+		<h1>Welcome to Admin Panel</h1>
+	</div>
+	<h2>Folowing orders have been placed: </h2>
+		<table align="center">
+			<tr>
+				<th>Unique Id</th>
+				<th>Name</th>
+				<th>Contact</th>
+				<th>Address</th>
+				<th>Email</th>
+				<th>Quantity</th>
+				<th>Date of Order</th>
+			</tr>
+			<% orders.forEach(function(order){%>	
+			<tr>
+				<td><%= order._id %></td>
+				<td><%= order.name%></td>
+				<td><%= order.contact%></td>
+				<td><%= order.address%></td>
+				<td><%= order.email%></td>
+				<td><%= order.quantity%></td>
+				<td><%= order.date%></td>
+			</tr>
+		   <% });%>
+		</table>
+
+		<br>
+		<br>
+		<h2>Following Pickup Requests have been made: </h2>
+		<table align="center">
+			<tr>
+				<th>Unique Id</th>
+				<th>Name</th>
+				<th>Contact</th>
+				<th>Address</th>
+				<th>Email</th>
+				<th>Quantity</th>
+				<th>Date of Order</th>
+			</tr>
+			<% pickup.forEach(function(Pickup){%>	
+			<tr>
+				<td><%= Pickup._id %></td>
+				<td><%= Pickup.name%></td>
+				<td><%= Pickup.contact%></td>
+				<td><%= Pickup.address%></td>
+				<td><%= Pickup.email%></td>
+				<td><%= Pickup.quantity%></td>
+				<td><%= Pickup.date%></td>
+			</tr>
+		   <% });%>
+		</table>
+
+</div>
+
+
+
+<% include footer %>

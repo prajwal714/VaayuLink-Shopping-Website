@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VayuL->K</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+          <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <style>
+
+    body{
+      background-color: black;
+    }
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" style="padding-top: 10px;">
+     <div class="container-fluid">
+          <div class="header">
+                 <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-cloud" style="font-size: 30px; padding-bottom: 10px;"></span></a>
+      
+          </div>
+          <div class="collapse navbar-collapse">
+
+               <ul class="nav navbar-left navbar-nav">
+                    <li> <a href="/About"><span style="font-size: 20px;" class="glyphicon glyphicon-info-sign">About</span></a></li>
+               </ul>
+
+               <ul class="nav navbar-right navbar-nav">
+                    
+                    <li><a href="/Order">Order Online <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li><a href="/maps">Convert to Ink <span class="glyphicon glyphicon-leaf"></span></a></li>
+                    <li><a href="/stats">Annual Report <span class="glyphicon glyphicon-stats"></span></a></li>
+                    <li><a href="/admin">Admin <span class="glyphicon glyphicon-user"></span></a></li>
+                    
+                   
+                  </ul>  
+               </div>
+               
+          </div>
+     </div>
+</nav>
+<div class="conatiner" style="text-align: center;">
+  <div class="jumbotron">
+    <h1>Our Service Doorstep Away</h1>
+  </div>
+  <h3 style="color: white;">These are our closest Conversion and Laboratory centres: </h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <div style="margin: 40px auto; width: 60%; text-align: center;">
+        <h3>Our Partnership with Labs and Manufacturers</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac odio lacinia odio volutpat placerat ut sit amet purus. Phasellus mauris justo, sollicitudin vel interdum sodales, malesuada ac arcu. Nunc interdum scelerisque tellus, ac volutpat turpis sodales sit amet. Nullam sit amet arcu non lectus ultrices laoreet non nec nisl. Proin eu dui libero. Etiam vehicula porta metus, sit amet tincidunt arcu feugiat quis. Phasellus sit amet condimentum sem, congue ultricies lectus. Vivamus aliquet blandit porta. Curabitur efficitur arcu a dui condimentum eleifend.<br>
+
+      Ut maximus viverra imperdiet. Fusce ac tellus arcu. Pellentesque nec urna lacus. Donec lacinia nec odio in pellentesque. Curabitur feugiat risus quis ante varius bibendum. Duis sapien lorem, faucibus eu nisl vel, facilisis volutpat justo. Quisque mattis odio enim, ut elementum eros auctor non. Fusce posuere sem vitae turpis egestas, ac pharetra est imperdiet. Donec maximus tempus bibendum.<br>
+
+      Ut et malesuada elit, vitae pellentesque odio. Mauris at nulla vehicula, maximus neque nec, lacinia sapien. Fusce eleifend commodo sollicitudin. Ut turpis mi, feugiat vel gravida id, fringilla eget mi. Mauris in luctus augue. Pellentesque a consequat justo, eu porttitor mi. Donec euismod mattis ligula, ut tempor diam pharetra non. Fusce at malesuada lectus.<br>
+
+      In id tincidunt felis. Sed accumsan orci at ipsum scelerisque, ac pretium erat vehicula. Sed eleifend aliquam libero facilisis finibus. Nulla quis tellus ipsum. Vivamus ut tempor nunc. Maecenas aliquet neque nec lacus pharetra laoreet. Aliquam luctus purus eu fermentum fermentum. Aliquam at vestibulum lacus. Etiam metus dolor, porta in eros id, aliquet gravida arcu.<br>
+
+      Vivamus quis feugiat ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam consequat nulla sed purus congue mattis. Aliquam eu felis eu magna pulvinar malesuada lacinia volutpat felis. Mauris non ultricies dui, id volutpat velit. In et malesuada nibh. Maecenas tristique eleifend justo, eu mattis dolor. Praesent diam leo, laoreet quis augue at, rutrum sollicitudin magna. Aliquam eget magna mattis ipsum euismod tincidunt. Praesent mattis, elit eu faucibus cursus, quam eros ullamcorper ligula, at facilisis lorem nisi sed nisi. Morbi vel pulvinar magna. Cras ac ultrices odio.</p>
+    </div>
+    
+
+
+
+    <div style=" margin: 50px auto; background-color: rgb(24,24,23);">
+      <h1 style=" padding-top: 20px;text-align: center; color: white;"><span class="glyphicon glyphicon-briefcase" style="font-size: 30px; padding-bottom: 10px;"></span> For Home PickUp: </h1>
+
+        <div class="container" style="text-align: center; margin: 30px auto; width: 20%;">
+               <form action="/maps" method="POST">
+                    <div class="form-group">
+                         <input class="form-control"type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                         <input class="form-control" type="email"  name="email" placeholder="Email-id" required>
+                    </div>
+                     <div class="form-group">
+                         <input class="form-control" type="text" name="contact" pattern="[1-9]{1}[0-9]{9}" placeholder="Contact Number"required> 
+                    </div>
+                    <div class="form-group">
+                         <input class="form-control" type="text" name="address" placeholder="PickUp Address" required>
+                    </div>
+                   
+                    <div class="form-group">
+                         <input id="q" class="form-control" type="number" maxlength="1"  name="quantity" placeholder="Quantity" required>
+                         <p style="color: white;">You Earned: <span id="display_msg"></span> </p>
+                    </div>
+                    <div class=form-group>
+                      <button onClick="showMsg()" class="btn btn-sm btn-primary btn-block">Calculate Approx $</button>
+                    </div>
+                    <div class="form-group">
+                         <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+
+                    <script type="text/javascript">
+                      function showMsg()
+                      {
+                        var msg=document.querySelector("#q").value;
+                        display_msg.innerHTML=msg*4.5+" $";
+                      }
+                    </script>
+
+                    
+               </form>
+               <a style="color:white;"href="/About">Go Back</a>
+     </div>
+    </div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var locations = [
+      ['IIITM Gwalior', 26.24, 78.17, 4],
+      ['IIT Kanpur', 26.51, 80.23, 5],
+      ['IIT BHU', 25.26, 82.98, 3],
+      ['IIT Indore', 22.52, 75.92, 2],
+      ['IIITDM Jabalpur', 23.1777, 80.021, 1]
+    ];
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 5,
+      center: new google.maps.LatLng(26.24, 78.17),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+    var marker,i;
+    for( i=0;i<locations.length;i++)
+    {
+       marker=new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+       google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    };
+  // var iiitm = {lat: 26.344, lng: 78.036};
+  // var iitk={lat: 26.5123,lng: 80.2329};
+  // // The map, centered at Uluru
+  // var map = new google.maps.Map(
+  //     document.getElementById('map'), {zoom: 4, center: iiitm});
+  // // The marker, positioned at Uluru
+  // var marker = new google.maps.Marker({position: iiitm, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEWDZiiUhPeT9RjV1xP5ADUaP0Ce4oiOg&callback=initMap">
+    </script>
+</div>
+    
+  </body>
+</html>
