@@ -3,6 +3,7 @@ var express=require("express"),
 	mongoose=require("mongoose"),
 	pickup=require("./models/pickup"),
 	order=require("./models/order"),
+	admin=require("./models/admin"),
 	bodyParser=require("body-parser");
 
 	app.use(express.static("public"));
@@ -11,6 +12,19 @@ var express=require("express"),
 
 	mongoose.connect("mongodb://localhost/vayulink");
 
+	var passport=require("passport"),
+		localStrategy=require("passport-local");
+
+		app.use(require("express-session")({
+			secret:"Hello World",
+			resave:false,
+			saveUninitialized: false
+		}));
+		app.use(passport.initialize());
+		app.use(passport.session());
+		passport.use(new localStrategy(admin.authenticate()));
+		passport.serializeUser(admin.serializeUser());
+		passport.deserializeUser(admin.deserializeUser());
 	app.get("/",function(req,res)
 	{
 		res.redirect("/About");
@@ -60,9 +74,9 @@ var express=require("express"),
 
 	});
 
-	app.get("/admin",function(req,res)
+	app.get("/admin",isAdmin,function(req,res)
 	{
-		
+		var admin=req.user;
 		order.find({},function(err,orders)
 		{
 			pickup.find({},function(err,pickups)
@@ -70,7 +84,7 @@ var express=require("express"),
 				if(err)
 				console.log(err);
 				else
-				res.render("admin",{orders:orders,pickup:pickups});
+				res.render("admin",{orders:orders,pickup:pickups,admin:admin});
 		});
 			
 		});
@@ -119,14 +133,62 @@ var express=require("express"),
 				console.log("succesfully added "+newpickup+" to pickup database");
 			}
 		});
-	})
+	});
 	app.get("/maps",function(req,res)
 	{
 		res.render("maps");
-	})
+	});
+	//AUTH routes
+	//signup route
+	app.get("/admin/signup",isAdmin,function(req,res)
+	{
+		res.render("signup");
+	});
+	app.post("/admin/signup",isAdmin,function(req,res)
+	{
+		var newAdmin=new admin({username:req.body.username});
+		admin.register(newAdmin,req.body.password,function(err,admin)
+		{
+			if(err)
+			{
+				console.log(err);
+				return res.render("signup");
+			}
+			passport.authenticate("local")(req,res,function()
+			{
+				console.log("Succesfully signed up");
+				res.redirect("/About");
+			});
+		})
+	});
+	app.get("/admin/login",function(req,res)
+	{
+		res.render("login");
+	});
+	app.post("/admin/login",passport.authenticate("local",
+		{
+			successRedirect: "/admin",
+			failureRedirect: "/admin/login"
+		}),function(req,res)
+	{
+
+	});
+	//logout route
+	app.get("/admin/logout",function(req,res)
+	{
+		req.logout();
+		res.redirect("/About");
+	});
+	//to check whether the person is logged in or not
+	function isAdmin(req,res,next)
+	{
+		if(req.isAuthenticated())
+			return next();
+		res.redirect("/admin/login");
+	}
 	app.listen(3001,'127.0.0.1',function()
 	{
 		console.log("Server started at 3001")
-	})
+	});
 
 	

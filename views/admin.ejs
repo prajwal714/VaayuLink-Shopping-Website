@@ -35,7 +35,16 @@
                     <li><a href="/Order">Order Online <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
                     <li><a href="/">Convert to Ink <span class="glyphicon glyphicon-leaf"></span></a></li>
                     <li><a href="/stats">Annual Report <span class="glyphicon glyphicon-stats"></span></a></li>
-                    <li><a href="/admin">Admin <span class="glyphicon glyphicon-user"></span></a></li>
+                    
+                    <% if(!admin){ %>
+                    	<li><a href="/admin">Admin <span class="glyphicon glyphicon-user"></span></a></li>
+                    	<li><a href="/admin/login">Login</a></li>
+                    <% } else { %>
+                    <li><a href="#"><span><em>Signed in as: Admin</em></span></a></li>
+                    <li><a href="/admin/logout">Logout</a></li>
+
+                <% } %>
+                    
                     
                    
                   </ul>  
