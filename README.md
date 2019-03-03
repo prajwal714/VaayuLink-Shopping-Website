@@ -12,7 +12,13 @@ The stats section displays, the chart of our sales.
 
 Technology used: NodeJS, Express, MongoDB, Bootstrap, JS, CSS and HTML.
 
-##Screenshots of the Website
-![Alt text](/screenshots/1.png?raw=true "Optional Title")
+# Screenshots of the Website
+
+
+![Alt text](/screenshots/4.png?raw=true "Landing Page")
+![Alt text](/screenshots/1.png?raw=true "About Page")
+![Alt text](/screenshots/5.png?raw=true "Order Page")
+![Alt text](/screenshots/3.png?raw=true "Admin Panel Page")
+![Alt text](/screenshots/2.png?raw=true "Location Page")
 
 Here is the link to our Video Presentation of Project: https://www.youtube.com/watch?v=98EMa3KgpwQ&t=13s
