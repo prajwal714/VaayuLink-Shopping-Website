@@ -27,8 +27,13 @@ var express=require("express"),
 		passport.deserializeUser(admin.deserializeUser());
 	app.get("/",function(req,res)
 	{
-		res.redirect("/About");
+		res.redirect("/home");
 	});
+
+	app.get("/home",function(req,res)
+	{
+		res.render("landing.ejs");
+	})
 
 	//Home page of website
 	app.get("/About",function(req,res)

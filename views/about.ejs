@@ -1,13 +1,327 @@
-<% include header.ejs %>
-<div class="container">
-	<div class="jumbotron">
-		<h1>Welcome to Home page</h1>
-	</div>
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>VayuL->K</title>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+          <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+          <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+          <link rel="stylesheet" href="/stylesheets/main.css">
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <style>
+  body {
+      position: relative; 
+  }
+  br{
+    font-size: 28px;
+  }
+  ul{
+    list-style-type: none;
+  }
+  div img {
+  display:inline-block;
+  width:33%;
+  height:50%;
+}
+div:after{
+  content:'';
+  display:inline-block;
+  width:100%;
+}
+ul.nav-pills {
+      top: 120px;
+      position: fixed;
+      background: black;
+  }
+  h2{
+    font-size: 60px;
+  }
+  .right_side
+  {
+    margin-top:25px;
+    margin-left:180px;
+  }
+  .container-fluid {
+     position: relative;
+     opacity: 0.8;
+     /*filter: alpha(opacity=90);*/
+  }
+  /*.affix {
+      top:0;
+      
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
 
-	<h2>I know the homepage is quite blank. Work under progress By chirag and AAkash ;)</h2>
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }*/
+#about {padding:50px;height:800px;color: #fff; background-color: #888888;font-size:25px; }
+  #product {padding:50px;height:1900px;color: #fff; background-color: #ff9800;margin-bottom: 50px;}
+  #buy {padding-bottom: 20px;margin-bottom: 50px; margin-top: 100px;padding-top:50px;height:500px;color: #fff; background-color: #585858;}
+  #refill {padding:50px;height:500px;color: #fff; background-color: #ff9800;margin-bottom: 30px;}
+  #clean {padding:50px;height:500px;color: #fff; background-color: #666666;margin-bottom: 30px;}
+  #contact {padding:50px;height:500px;color: #fff; background-color: #003300;margin-bottom: 30px;}
+  div.sidebar {
+    
+    background-color: #ffffff;
+    
+    opacity: 0.6;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+p{
+  line-height: 28px;
+  font-size: 20px;
+  padding: 10px;
+}
+.carousel .overlay {
+  margin-top: 500px;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    width: 50%;
+    height: 10%;
+    /*position: absolute;*/
+    top: 10px;
+    left: 0;
+}
+.carousel-caption {
+  margin-top: 350px;
+    left: 15%;
+    right: 15%;
+    top: 70px;
+    height: 50%;
+}
+.carousel-caption h1 {
+
+    color: #fff;
+    margin-bottom:20px;
+}
+.carousel-caption h1.second_heading {
+    color:#ffcb0f;
+    
+}
+.carousel-caption > h3 {
+    color: #fff;
+    font-family: "futura_ltbook",sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: inherit;
+}
+.carousel-caption > p {
+    font-size: 23px;
+    line-height: 28px;
+}
+.btn.know_btn {
+    background: #ffcb0f none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #fff;
+    font-family: "futura_ltbold",sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border:1px solid transparent;
+}
+.carousel-caption .btn.know_btn {
+    margin-top: 64px;
+}
+.carousel-caption .btn.know_btn:last-child {
+    margin-left: 20px;
+}
+.btn.know_btn:hover,
+.btn.know_btn:focus {
+    background: transparent;
+    color:#ffcb0f;
+    border:1px solid #ffcb0f;
+}
+
+
+
+
+.carousel-control{
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top:-25px;
+    top:50%;
+}
+.affix {
+        top: 0;
+        width: 100%;
+        z-index: 9999 !important;
+      }
+  /*.navbar {
+      margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+     position: relative;
+     top: 50px;
+  }*/
+    </style>
+     </head>
+     <body data-spy="scroll" data-target="#myScrollspy" data-offset="20" background="IMG-20181101-WA0018.jpg">
+      <!-- <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?" style="width: 100%; height: auto;" alt="Construction">
+                        <div class="overlay">
+                            <div class="carousel-caption">
+                                <h3>Welcome to VayuLink</h3>
+                                <h1>Engineering solutions</h1>
+                                <h1 class="second_heading">Creative & Professional</h1>
+                                <p>Making the world a safer place</p>
+                                <a href="/stats"  class="btn know_btn">Annual Report</a>
+                                <a href="/Order" class="btn know_btn">Order Today</a>
+                            </div>          
+                        </div>
+                    </div> -->
+                    
+          <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="10">
+     <!-- <div class="container-fluid"> -->
+          
+          <div class="collapse navbar-collapse" >
+              <!-- <div class="header">
+                 <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-cloud" style="font-size: 30px; padding-bottom: 10px;"></span></a>
+      
+          </div> -->
+               <ul class="nav navbar-left navbar-nav">
+                  <li><a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" style="font-size: 30px; margin-top: 0px;"></span></a></li>
+                    <li> <a href="/About"><span style="font-size: 20px;" class="glyphicon glyphicon-info-sign">About</span></a></li>
+               </ul>
+
+               <ul class="nav navbar-right navbar-nav">
+                    
+                    <li><a href="/Order">Order Online <span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                    <li><a href="/maps">Convert to Ink <span class="glyphicon glyphicon-leaf"></span></a></li>
+                    <li><a href="/stats">Annual Report <span class="glyphicon glyphicon-stats"></span></a></li>
+                    <li><a href="/admin">Admin <span class="glyphicon glyphicon-user"></span></a></li>
+                    
+                   
+                  </ul>  
+               </div>
+               
+          <!-- </div> -->
+</nav>
+<!-- <img src="https://images.pexels.com/photos/459728/pexels-photo-459728.jpeg?" style="width: 100%; height: auto;"> -->
+          
+<div class="sidebar">
+  <nav class="col-sm-3" id="myScrollspy" >
+        <ul class="nav nav-pills nav-stacked"style="color: white; background-color: white;">
+          <li><a title="about" href="#about" style="font-size: 20px">About Us</a></li>
+          <li><a href="#product" title="product" style="font-size: 20px">About Product</a></li>
+          <li><a title="buy" href="#buy" style="font-size: 20px">Buy</a></li>
+          <li><a title="refill" href="#refill" style="font-size: 20px">Refill</a></li>
+          <li><a title="clean" href="#clean" style="font-size: 20px">Clean India</a></li>
+          <li><a title="contact info" href="#contact" style="font-size: 20px">Contact Us</a></li>
+        </ul>
+      </nav>
 </div>
 
+      <div class="right_side">
 
+<div id="about" class="container-fluid">
 
+  <h2 style="text-align:center; font-size: 80px;"> About Us</h2>
+  <!-- <span><img src="https://images.pexels.com/photos/273280/pexels-photo-273280.jpeg?" style="width: 40%; height: auto; margin-top: 30px; margin-bottom: 30px; display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;"></span> -->
+  <table>
+    <tr>
+      <td>
+        <p>
+          Welcome Everyone to our first newly initiative towards country's growing air pollution. As we know that our society is facing many problems under <strong>Tragedy Of Commons(TOC)</strong> i.e. common sharing things. For example - Air, Land, Water, etc. It is increasing at a very alarming rate and no-one can solve it by alone. It's one and only solution is we all. Wthout the help of each and every person of the country, no-one will eventually solve this problem not even our government. So I request you all to join our hands and gives your support to make it possible so that our present & upcoming generations will live a life without pollution.
+        </p>
+      </td>
+      <td>
+        <p>
+          <img src="IMG-20181101-WA0019.jpg" style=" width: 100%; height: auto;">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://images.pexels.com/photos/237325/pexels-photo-237325.jpeg?" style="width:60%; height:auto;">
+      </td> 
+      <td>
+        <p>
+          This website is for the people who is having automobiles like car, bike, scooty and all environment pollutant gas emitter things like factory, buses, etc. We are here with a newly invent automobile part <strong>KAALINK</strong> which absorbs all the smoke, greenhouses gases and make automobile environment friendly without investing much cost.
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
+<br>
+<div id="product" class="container-fluid" style="height: 1000px; margin-bottom: 10px;">
+  <h2 style="text-align:center">About Product</h2>
+  <p>
+    Kaalink is a contraption retrofitted to the exhausted pipe of vehicles to capture the outgoing pollutants.<br>This does not affect the vehicle/engine performance.<br>Soot collected by kaalink undergoes various proprietary process to remove heavy metals and carcinogens. The end product is purified carbon based pigment.<br>In the final stage, the carbon is taken through another chemical process to make different types of inks and paints.<br>Every 45 minutes worth of car emissions - 30 ml of ink.<br>600 ml sprays holds the equivalent of 2000 hours of pollution.<br>
+    It can also be mount over mouths of boats, chimneys and cranes.<br>It not only stops CO2 gas enter into air but also captures a dangerous carbon soot called PM 2.5(Particulate Matter 2.5(size of particle in microns)).<br><br> For more details please refer <button class="btn-small btn-default"><a href="https://en.wikipedia.org/wiki/Air_Ink">KAALINK WIKIPEDIA</a></button>
+  </p>
+  
+    <img style="padding: 10px;" src="IMG-20181101-WA0004.jpg" style="width:50% height:auto">
+    <img style="padding: 10px;" src="IMG-20181101-WA0007.jpg" style="width:50% height:auto">
+    <img style="padding: 10px;" src="IMG-20181101-WA0002.jpg" style="width:50% height:auto">
+  
+</div>
+<div id="buy" class="container-fluid" style="height: 800px;">
+  <h2 style="text-align:center">Buy Kaalink</h2>
+<strong>Benefits for the automobile user:</strong><br><br>
+<p>
+  1. With this cheap device you can contribute towards the green environment upto a great extent.<br>
+  2. If your vehicle contains this device then you will get some discount also on you yearly vehicle insurance.<br>
+  3. This motivate others for doing so also.<br><br><br>
+  <strong>Terms And Conditions for buying the product:</strong><br><br>
+  1) Mention you name and address very carefully.<br>
+  2) Since there is home delivery option you should mention your mobile number correctly for both our executive and your inconvenience.<br>
+  3) Please pay the money through suitable options like credit card, debit card, net banking or government approved API wallets.<br> 
+  4) Delivery will be made within 7 working days.<br>
+  5) In case of any delivery related queries please contact us through suitable media. We will try to sort out all your queries as early as possible.<br><br><br>
+  I hope you are a well aware citizen of the country and excited to buy Kaalink for your domestic vehicle.
+  For making your vehicle environment friendly please proceed to the following link --- <button class="btn-large btn-default"><a href="/Order">Buy Kaalink</a></button>
+</p>
 
-<% include footer.ejs %>
+</div>
+<div id="refill" class="container-fluid">
+  <h2 style="text-align:center"> Refill</h2>
+  
+  <p>
+    <strong>Benefits of refilling the device:</strong><br><br>
+    1. Refilling keeps your device long lasting.<br>
+    2. No worry for refiiling. Door step services by our executives.<br>
+    3. Refilling provides you the money which will be giving by us.<br>
+    4. That money you can use for the maintainance of your vehicle and for the refuel your vehicle.<br>
+    5. Your buying rate will seems small over your gaining rate.<br><br><br>
+    So become a aware citizen of the country and contribute yourself towards eco-freindly nature please proceed to the following link for drop a request of refilling your Kaalink Device --- <button class="btn-large btn-default"><a href="/maps">Refill Device</a></button>
+  </p>
+  
+</div>
+<div id="clean" class="container-fluid">
+  <h2 style="text-align:center">Clean India</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum aliquam justo vel accumsan. Nunc accumsan vestibulum neque ac egestas. Quisque gravida finibus mauris ut faucibus. Nunc porttitor, massa at ullamcorper laoreet, purus tellus feugiat tortor, a dictum orci nisi quis nisi. Etiam eu maximus urna. Praesent eros lectus, imperdiet vitae libero a, faucibus blandit magna. Fusce sodales, sapien vel eleifend tristique, ipsum leo scelerisque ipsum, ac vulputate justo arcu eget magna. Morbi sollicitudin ligula sem, vel ultricies mi scelerisque hendrerit.
+
+    Mauris porttitor, sem ac aliquam viverra, lorem nisi laoreet enim, vel egestas tortor elit vitae nisl. Cras placerat sem nunc, nec pellentesque erat blandit sed. Sed venenatis, tortor a congue vehicula, ex metus laoreet ipsum, sed molestie lorem erat ac quam. Mauris purus diam, lacinia sollicitudin nisl a, laoreet varius magna. Vivamus vestibulum velit libero, eu eleifend justo ultricies in. Integer faucibus massa magna, et porttitor est eleifend vel. Ut egestas, lorem vitae vehicula suscipit, felis lacus placerat lacus, ut vulputate mauris risus eu quam. Nunc eu ex enim. Nunc placerat nunc diam, et vestibulum velit scelerisque eget. Donec pharetra enim vitae luctus ultrices. Suspendisse dapibus accumsan lorem, vel feugiat augue bibendum vel. Morbi dignissim blandit dolor a molestie.
+  </p>
+  
+</div>
+<div id="contact" class="container-fluid">
+  <h2 style="text-align:center">Contact Us</h2><br><br>
+  <p>
+    In case of any type of query related to buy, refill, etc. feel free to contact us at any given phone number:<br><br>
+  Mobile Number : +917869649268,
+                  +918317057596,
+                  +919411875266<br>
+  Or mail us at :  cjindal275@gmail.com,
+                   Prajwal714singh@gmail.com
+  </p>
+  
+</div>
+</div>
+
+          
+</body>
+</html>
